@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portraits — Brennan Walter</title>
+<meta name="description" content="Portrait photography by Brennan Walter">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <a href="index.html" class="name">Brennan Walter</a>
+  <nav>
+    <a href="index.html#work">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <a class="back-link" href="index.html">← Back to all work</a>
+  <h1 class="display">Portraits</h1>
+  <p>One-on-one sessions in natural light — headshots, seniors, couples, and quiet moments that hold up over time.</p>
+</div>
+
+<section id="work">
+  <div class="gallery">
+    <div class="frame full reveal">
+      <img src="https://picsum.photos/id/64/1800/800" alt="Replace with your photo — window-light.jpg">
+      <div class="cap"><span class="title">Window Light</span><span class="num">01/09</span></div>
+    </div>
+    <div class="frame tall reveal">
+      <img src="https://picsum.photos/id/91/900/1100" alt="Replace with your photo — quiet-gaze.jpg">
+      <div class="cap"><span class="title">Quiet Gaze</span><span class="num">02/09</span></div>
+    </div>
+    <div class="frame tall reveal">
+      <img src="https://picsum.photos/id/177/900/1100" alt="Replace with your photo — porch-light.jpg">
+      <div class="cap"><span class="title">Porch Light</span><span class="num">03/09</span></div>
+    </div>
+    <div class="frame square reveal">
+      <img src="https://picsum.photos/id/338/900/900" alt="Replace with your photo — senior-session.jpg">
+      <div class="cap"><span class="title">Senior Session</span><span class="num">04/09</span></div>
+    </div>
+    <div class="frame square reveal">
+      <img src="https://picsum.photos/id/342/900/900" alt="Replace with your photo — the-two-of-you.jpg">
+      <div class="cap"><span class="title">The Two of You</span><span class="num">05/09</span></div>
+    </div>
+    <div class="frame square reveal">
+      <img src="https://picsum.photos/id/349/900/900" alt="Replace with your photo — headshot.jpg">
+      <div class="cap"><span class="title">Headshot</span><span class="num">06/09</span></div>
+    </div>
+    <div class="frame wide reveal">
+      <img src="https://picsum.photos/id/433/900/1100" alt="Replace with your photo — backyard-session.jpg">
+      <div class="cap"><span class="title">Backyard Session</span><span class="num">07/09</span></div>
+    </div>
+    <div class="frame wide reveal">
+      <img src="https://picsum.photos/id/453/900/1100" alt="Replace with your photo — front-steps.jpg">
+      <div class="cap"><span class="title">Front Steps</span><span class="num">08/09</span></div>
+    </div>
+    <div class="frame full reveal">
+      <img src="https://picsum.photos/id/499/1800/800" alt="Replace with your photo — the-family.jpg">
+      <div class="cap"><span class="title">The Family</span><span class="num">09/09</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>&copy; 2026 Brennan Walter</span>
+  <span>Kansas</span>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

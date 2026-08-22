@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weddings — Brennan Walter</title>
+<meta name="description" content="Wedding photography by Brennan Walter">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <a href="index.html" class="name">Brennan Walter</a>
+  <nav>
+    <a href="index.html#work">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <a class="back-link" href="index.html">← Back to all work</a>
+  <h1 class="display">Weddings</h1>
+  <p>Full days, told in the moments between the planned ones — getting ready, first looks, the walk down, the last dance.</p>
+</div>
+
+<section id="work">
+  <div class="gallery">
+    <div class="frame full reveal">
+      <img src="https://picsum.photos/id/1062/1800/800" alt="Replace with your photo — first-look.jpg">
+      <div class="cap"><span class="title">First Look</span><span class="num">01/09</span></div>
+    </div>
+    <div class="frame tall reveal">
+      <img src="https://picsum.photos/id/1027/900/1100" alt="Replace with your photo — getting-ready.jpg">
+      <div class="cap"><span class="title">Getting Ready</span><span class="num">02/09</span></div>
+    </div>
+    <div class="frame tall reveal">
+      <img src="https://picsum.photos/id/1031/900/1100" alt="Replace with your photo — the-vows.jpg">
+      <div class="cap"><span class="title">The Vows</span><span class="num">03/09</span></div>
+    </div>
+    <div class="frame square reveal">
+      <img src="https://picsum.photos/id/1033/900/900" alt="Replace with your photo — rings.jpg">
+      <div class="cap"><span class="title">Rings</span><span class="num">04/09</span></div>
+    </div>
+    <div class="frame square reveal">
+      <img src="https://picsum.photos/id/1036/900/900" alt="Replace with your photo — the-toast.jpg">
+      <div class="cap"><span class="title">The Toast</span><span class="num">05/09</span></div>
+    </div>
+    <div class="frame square reveal">
+      <img src="https://picsum.photos/id/1040/900/900" alt="Replace with your photo — golden-hour.jpg">
+      <div class="cap"><span class="title">Golden Hour</span><span class="num">06/09</span></div>
+    </div>
+    <div class="frame wide reveal">
+      <img src="https://picsum.photos/id/1045/900/1100" alt="Replace with your photo — first-dance.jpg">
+      <div class="cap"><span class="title">First Dance</span><span class="num">07/09</span></div>
+    </div>
+    <div class="frame wide reveal">
+      <img src="https://picsum.photos/id/1053/900/1100" alt="Replace with your photo — late-night.jpg">
+      <div class="cap"><span class="title">Late Night</span><span class="num">08/09</span></div>
+    </div>
+    <div class="frame full reveal">
+      <img src="https://picsum.photos/id/1059/1800/800" alt="Replace with your photo — send-off.jpg">
+      <div class="cap"><span class="title">Send-Off</span><span class="num">09/09</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>&copy; 2026 Brennan Walter</span>
+  <span>Kansas</span>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

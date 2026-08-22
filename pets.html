@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pets — Brennan Walter</title>
+<meta name="description" content="Pet photography by Brennan Walter">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <a href="index.html" class="name">Brennan Walter</a>
+  <nav>
+    <a href="index.html#work">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <a class="back-link" href="index.html">← Back to all work</a>
+  <h1 class="display">Pets</h1>
+  <p>On location or at home — dogs, cats, and the occasional barn animal, photographed the way their people actually see them.</p>
+</div>
+
+<section id="work">
+  <div class="gallery">
+    <div class="frame full reveal">
+      <img src="https://picsum.photos/id/237/1800/800" alt="Replace with your photo — porch-dog.jpg">
+      <div class="cap"><span class="title">Porch Dog</span><span class="num">01/09</span></div>
+    </div>
+    <div class="frame tall reveal">
+      <img src="https://picsum.photos/id/219/900/1100" alt="Replace with your photo — field-run.jpg">
+      <div class="cap"><span class="title">Field Run</span><span class="num">02/09</span></div>
+    </div>
+    <div class="frame tall reveal">
+      <img src="https://picsum.photos/id/582/900/1100" alt="Replace with your photo — window-cat.jpg">
+      <div class="cap"><span class="title">Window Cat</span><span class="num">03/09</span></div>
+    </div>
+    <div class="frame square reveal">
+      <img src="https://picsum.photos/id/1025/900/900" alt="Replace with your photo — good-boy.jpg">
+      <div class="cap"><span class="title">Good Boy</span><span class="num">04/09</span></div>
+    </div>
+    <div class="frame square reveal">
+      <img src="https://picsum.photos/id/169/900/900" alt="Replace with your photo — barn-cat.jpg">
+      <div class="cap"><span class="title">Barn Cat</span><span class="num">05/09</span></div>
+    </div>
+    <div class="frame square reveal">
+      <img src="https://picsum.photos/id/1084/900/900" alt="Replace with your photo — old-dog.jpg">
+      <div class="cap"><span class="title">Old Dog</span><span class="num">06/09</span></div>
+    </div>
+    <div class="frame wide reveal">
+      <img src="https://picsum.photos/id/1074/900/1100" alt="Replace with your photo — morning-walk.jpg">
+      <div class="cap"><span class="title">Morning Walk</span><span class="num">07/09</span></div>
+    </div>
+    <div class="frame wide reveal">
+      <img src="https://picsum.photos/id/1025/900/1100" alt="Replace with your photo — barnyard.jpg">
+      <div class="cap"><span class="title">Barnyard</span><span class="num">08/09</span></div>
+    </div>
+    <div class="frame full reveal">
+      <img src="https://picsum.photos/id/1074/1800/800" alt="Replace with your photo — home-again.jpg">
+      <div class="cap"><span class="title">Home Again</span><span class="num">09/09</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>&copy; 2026 Brennan Walter</span>
+  <span>Kansas</span>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
