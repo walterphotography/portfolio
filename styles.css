@@ -374,10 +374,12 @@
   /* Same card, turned horizontally, centered under the row */
   .cat-card.horizontal {
     aspect-ratio: 4/3;
-    grid-column: 2;
+    grid-column: 1 / -1;
+    max-width: 700px;
+    margin: 0 auto;
   }
   @media (max-width: 750px) {
-    .cat-card.horizontal { grid-column: auto; }
+    .cat-card.horizontal { grid-column: auto; max-width: none; }
   }
 
   @media (max-width: 750px) {
