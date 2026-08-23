@@ -15,11 +15,19 @@
 <header class="site-nav">
   <a href="index.html" class="name">Brennan Walter</a>
   <nav>
+    <button id="sound-toggle" class="sound-toggle" aria-label="Toggle background sound" aria-pressed="false">
+      <svg class="icon-muted" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9v6h4l5 5V4L7 9H3z"/><line x1="16" y1="9" x2="21" y2="15"/><line x1="21" y1="9" x2="16" y2="15"/></svg>
+      <svg class="icon-playing" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" style="display:none"><path d="M3 9v6h4l5 5V4L7 9H3z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18 6a9 9 0 0 1 0 12"/></svg>
+    </button>
     <a href="index.html#work">Work</a>
     <a href="index.html#about">About</a>
     <a href="index.html#contact">Contact</a>
   </nav>
 </header>
+
+<audio id="bg-audio" loop preload="none">
+  <source src="ambient.mp3" type="audio/mpeg">
+</audio>
 
 <div class="page-hero">
   <a class="back-link" href="index.html">← Back to all work</a>
@@ -80,6 +88,7 @@
   }, { threshold: 0.15 });
   revealEls.forEach(el => io.observe(el));
 </script>
+<script src="audio.js"></script>
 
 </body>
 </html>

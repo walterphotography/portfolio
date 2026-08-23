@@ -178,28 +178,8 @@
     });
   }, { threshold: 0.15 });
   revealEls.forEach(el => io.observe(el));
-
-  // Background sound toggle
-  const soundBtn = document.getElementById('sound-toggle');
-  const bgAudio = document.getElementById('bg-audio');
-  const iconMuted = soundBtn.querySelector('.icon-muted');
-  const iconPlaying = soundBtn.querySelector('.icon-playing');
-  bgAudio.volume = 0.18;
-
-  soundBtn.addEventListener('click', () => {
-    if (bgAudio.paused) {
-      bgAudio.play().catch(() => {});
-      soundBtn.setAttribute('aria-pressed', 'true');
-      iconMuted.style.display = 'none';
-      iconPlaying.style.display = 'block';
-    } else {
-      bgAudio.pause();
-      soundBtn.setAttribute('aria-pressed', 'false');
-      iconMuted.style.display = 'block';
-      iconPlaying.style.display = 'none';
-    }
-  });
 </script>
+<script src="audio.js"></script>
 
 </body>
 </html>
