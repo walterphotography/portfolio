@@ -441,12 +441,12 @@
   }
   .page-hero .back-link {
     display: inline-block;
-    font-size: 0.78rem;
-    letter-spacing: 0.1em;
+    font-size: 1.15rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--paper-dim);
     text-decoration: none;
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.8rem;
     transition: color 0.2s ease;
   }
   .page-hero .back-link:hover { color: var(--paper); }
