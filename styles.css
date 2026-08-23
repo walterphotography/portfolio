@@ -334,6 +334,51 @@
     grid-template-columns: repeat(3, 1fr);
     gap: var(--gap);
   }
+  .categories-wide {
+    padding: 0 var(--gap);
+    margin-top: clamp(3rem, 6vw, 4.5rem);
+  }
+  .cat-card-wide {
+    position: relative;
+    aspect-ratio: 21/8;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    background: var(--bg-raised);
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  .cat-card-wide img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: saturate(0.85) brightness(0.85);
+    transition: transform 0.6s cubic-bezier(0.16,1,0.3,1), filter 0.4s ease;
+  }
+  .cat-card-wide::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(10,9,8,0.82) 0%, rgba(10,9,8,0.15) 55%, rgba(10,9,8,0.35) 100%);
+  }
+  .cat-card-wide:hover img { transform: scale(1.06); filter: saturate(1) brightness(0.95); }
+  .cat-card-wide .cat-label {
+    position: absolute; left: 1.3rem; bottom: 1.3rem; right: 1.3rem;
+    z-index: 2;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  .cat-card-wide .cat-label h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 500;
+    color: var(--paper);
+  }
+  .cat-card-wide .cat-label .arrow {
+    font-size: 1.3rem;
+    color: var(--paper-dim);
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  .cat-card-wide:hover .cat-label .arrow { transform: translateX(4px); color: var(--paper); }
+  @media (max-width: 750px) {
+    .cat-card-wide { aspect-ratio: 4/3; }
+  }
   .cat-card {
     position: relative;
     aspect-ratio: 3/4;

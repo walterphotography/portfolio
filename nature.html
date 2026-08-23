@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kansas Nature — Brennan Walter</title>
+<meta name="description" content="Kansas nature photography by Brennan Walter">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <a href="index.html" class="name">Brennan Walter</a>
+  <nav>
+    <a href="index.html#work">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="page-hero">
+  <a class="back-link" href="index.html">← Back to all work</a>
+  <h1 class="display">Kansas Nature</h1>
+  <p>Prairie skies, back roads, and whatever's growing wild along the way — all shot within a short drive of home.</p>
+</div>
+
+<section id="work">
+  <div class="gallery masonry">
+    <div class="frame no-crop reveal">
+      <img src="frame-01-dusk.jpg" alt="Sun breaking through storm clouds over a Kansas field">
+      <div class="cap"><span class="title">Kansas Sky, Dusk</span><span class="num">01/04</span></div>
+    </div>
+    <div class="frame no-crop reveal">
+      <img src="frame-04-wildflowers.jpg" alt="Wildflowers near Elk City Lake">
+      <div class="cap"><span class="title">Elk City Understory</span><span class="num">02/04</span></div>
+    </div>
+    <div class="frame no-crop reveal">
+      <img src="frame-05-daylily.jpg" alt="Close-up of an orange daylily">
+      <div class="cap"><span class="title">Daylily</span><span class="num">03/04</span></div>
+    </div>
+    <div class="frame no-crop reveal">
+      <img src="frame-03-boot.jpg" alt="Close-up of a boot among fallen leaves">
+      <div class="cap"><span class="title">First Steps of Spring</span><span class="num">04/04</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>&copy; 2026 Brennan Walter</span>
+  <span>Kansas</span>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
