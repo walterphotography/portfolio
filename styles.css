@@ -82,6 +82,28 @@
   .site-nav nav a:hover,
   .site-nav nav a:focus-visible { opacity: 1; border-color: var(--accent-bright); }
 
+  .sound-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1px solid var(--hairline);
+    border-radius: 50%;
+    width: 34px; height: 34px;
+    padding: 0;
+    color: var(--paper);
+    opacity: 0.75;
+    cursor: pointer;
+    transition: opacity 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  }
+  .sound-toggle:hover,
+  .sound-toggle:focus-visible {
+    opacity: 1;
+    border-color: var(--accent-bright);
+    background: rgba(239, 234, 226, 0.06);
+  }
+  .sound-toggle svg { display: block; }
+
   /* ---------- Hero ---------- */
   .hero {
     position: relative;
