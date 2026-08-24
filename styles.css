@@ -300,6 +300,46 @@
     .about-wrap img { max-width: 280px; }
   }
 
+  /* ---------- Scattered friend photos ---------- */
+  .scatter-photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.8rem 1.5rem;
+    max-width: 1100px;
+    margin: clamp(3rem, 6vw, 4.5rem) auto 0;
+    padding: 0 var(--gap);
+  }
+  .scatter-photos .polaroid {
+    background: #EFEAE2;
+    padding: 10px 10px 34px;
+    width: 170px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.45);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, z-index 0s;
+    cursor: default;
+  }
+  .scatter-photos .polaroid img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+    filter: saturate(0.92) contrast(1.02);
+  }
+  .scatter-photos .polaroid:hover {
+    transform: rotate(0deg) scale(1.08);
+    box-shadow: 0 16px 30px rgba(0,0,0,0.55);
+    z-index: 5;
+  }
+  .scatter-photos .p1 { transform: rotate(-6deg) translateY(4px); }
+  .scatter-photos .p2 { transform: rotate(4deg) translateY(-8px); }
+  .scatter-photos .p3 { transform: rotate(-3deg) translateY(10px); }
+  .scatter-photos .p4 { transform: rotate(5deg) translateY(-4px); }
+  .scatter-photos .p5 { transform: rotate(-5deg) translateY(6px); }
+  .scatter-photos .p6 { transform: rotate(3deg) translateY(-10px); }
+  @media (max-width: 750px) {
+    .scatter-photos .polaroid { width: 130px; }
+  }
+
   /* ---------- Feature break (animated bg, small photo, big text) ---------- */
   .feature-break {
     position: relative;
