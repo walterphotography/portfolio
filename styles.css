@@ -303,17 +303,17 @@
   /* ---------- Scattered friend photos ---------- */
   .scatter-photos {
     position: relative;
-    max-width: 1050px;
-    height: 380px;
+    max-width: 1300px;
+    height: 560px;
     margin: clamp(3rem, 6vw, 4.5rem) auto 0;
     padding: 0 var(--gap);
   }
   .scatter-photos .polaroid {
     position: absolute;
     background: #EFEAE2;
-    padding: 10px 10px 34px;
-    width: 170px;
-    box-shadow: 0 10px 22px rgba(0,0,0,0.45);
+    padding: 14px 14px 46px;
+    width: 250px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.5);
     transition: transform 0.35s ease, box-shadow 0.35s ease, z-index 0s;
     cursor: default;
   }
@@ -326,28 +326,29 @@
   }
   .scatter-photos .polaroid:hover {
     transform: rotate(0deg) scale(1.1) !important;
-    box-shadow: 0 16px 30px rgba(0,0,0,0.55);
+    box-shadow: 0 20px 38px rgba(0,0,0,0.6);
     z-index: 10;
   }
-  .scatter-photos .p1 { top: 10px;  left: 0%;   transform: rotate(-9deg); z-index: 1; }
-  .scatter-photos .p2 { top: 90px;  left: 15%;  transform: rotate(6deg);  z-index: 2; }
-  .scatter-photos .p3 { top: -15px; left: 32%;  transform: rotate(-4deg); z-index: 3; }
-  .scatter-photos .p4 { top: 110px; left: 48%;  transform: rotate(8deg);  z-index: 2; }
-  .scatter-photos .p5 { top: 20px;  left: 66%;  transform: rotate(-7deg); z-index: 4; }
-  .scatter-photos .p6 { top: 130px; left: 82%;  transform: rotate(5deg);  z-index: 1; }
+  .scatter-photos .p1 { top: 10px;  left: -1%;  transform: rotate(-11deg); z-index: 1; }
+  .scatter-photos .p2 { top: 190px; left: 12%;  transform: rotate(8deg);   z-index: 3; }
+  .scatter-photos .p3 { top: -30px; left: 30%;  transform: rotate(-6deg);  z-index: 2; }
+  .scatter-photos .p4 { top: 220px; left: 47%;  transform: rotate(10deg);  z-index: 4; }
+  .scatter-photos .p5 { top: 20px;  left: 66%;  transform: rotate(-9deg);  z-index: 3; }
+  .scatter-photos .p6 { top: 230px; left: 80%;  transform: rotate(6deg);   z-index: 1; }
 
-  @media (max-width: 750px) {
+  @media (max-width: 900px) {
     .scatter-photos {
       position: static;
       height: auto;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 1.8rem;
+      max-width: 100%;
     }
     .scatter-photos .polaroid {
       position: static;
-      width: 130px;
+      width: 150px;
     }
   }
 
