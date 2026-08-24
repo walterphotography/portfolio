@@ -302,15 +302,14 @@
 
   /* ---------- Scattered friend photos ---------- */
   .scatter-photos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.8rem 1.5rem;
-    max-width: 1100px;
+    position: relative;
+    max-width: 1050px;
+    height: 380px;
     margin: clamp(3rem, 6vw, 4.5rem) auto 0;
     padding: 0 var(--gap);
   }
   .scatter-photos .polaroid {
+    position: absolute;
     background: #EFEAE2;
     padding: 10px 10px 34px;
     width: 170px;
@@ -326,18 +325,30 @@
     filter: saturate(0.92) contrast(1.02);
   }
   .scatter-photos .polaroid:hover {
-    transform: rotate(0deg) scale(1.08);
+    transform: rotate(0deg) scale(1.1) !important;
     box-shadow: 0 16px 30px rgba(0,0,0,0.55);
-    z-index: 5;
+    z-index: 10;
   }
-  .scatter-photos .p1 { transform: rotate(-6deg) translateY(4px); }
-  .scatter-photos .p2 { transform: rotate(4deg) translateY(-8px); }
-  .scatter-photos .p3 { transform: rotate(-3deg) translateY(10px); }
-  .scatter-photos .p4 { transform: rotate(5deg) translateY(-4px); }
-  .scatter-photos .p5 { transform: rotate(-5deg) translateY(6px); }
-  .scatter-photos .p6 { transform: rotate(3deg) translateY(-10px); }
+  .scatter-photos .p1 { top: 10px;  left: 0%;   transform: rotate(-9deg); z-index: 1; }
+  .scatter-photos .p2 { top: 90px;  left: 15%;  transform: rotate(6deg);  z-index: 2; }
+  .scatter-photos .p3 { top: -15px; left: 32%;  transform: rotate(-4deg); z-index: 3; }
+  .scatter-photos .p4 { top: 110px; left: 48%;  transform: rotate(8deg);  z-index: 2; }
+  .scatter-photos .p5 { top: 20px;  left: 66%;  transform: rotate(-7deg); z-index: 4; }
+  .scatter-photos .p6 { top: 130px; left: 82%;  transform: rotate(5deg);  z-index: 1; }
+
   @media (max-width: 750px) {
-    .scatter-photos .polaroid { width: 130px; }
+    .scatter-photos {
+      position: static;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .scatter-photos .polaroid {
+      position: static;
+      width: 130px;
+    }
   }
 
   /* ---------- Feature break (animated bg, small photo, big text) ---------- */
