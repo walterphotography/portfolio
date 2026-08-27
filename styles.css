@@ -504,6 +504,20 @@
     .cat-card.horizontal { grid-column: auto; max-width: none; }
   }
 
+  /* Two horizontal cards side by side, spanning the full row together */
+  .cat-pair {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+  }
+  .cat-pair .cat-card {
+    aspect-ratio: 4/3;
+  }
+  @media (max-width: 750px) {
+    .cat-pair { grid-template-columns: 1fr; }
+  }
+
   @media (max-width: 750px) {
     .categories { grid-template-columns: 1fr; }
   }
