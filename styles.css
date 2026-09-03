@@ -509,6 +509,30 @@
   }
   .cat-card:hover .cat-label .arrow { transform: translateX(4px); color: var(--paper); }
 
+  .cat-card.coming-soon { cursor: not-allowed; }
+  .cat-card.coming-soon img {
+    filter: grayscale(0.85) brightness(0.55);
+  }
+  .cat-card.coming-soon:hover img {
+    transform: none;
+    filter: grayscale(0.85) brightness(0.55);
+  }
+  .cat-card.coming-soon .coming-soon-badge {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--paper);
+    border: 1px solid var(--hairline);
+    padding: 0.5rem 1rem;
+    background: rgba(23, 21, 19, 0.55);
+    white-space: nowrap;
+  }
+
   /* Same card, turned horizontally, centered under the row */
   .cat-card.horizontal {
     aspect-ratio: 4/3;
