@@ -443,6 +443,7 @@
     margin-top: 2.2rem;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     gap: 1.6rem;
     font-size: 0.78rem;
     letter-spacing: 0.08em;
@@ -451,6 +452,19 @@
   }
   .socials a { text-decoration: none; color: inherit; transition: color 0.2s ease; }
   .socials a:hover { color: var(--paper); }
+
+  .social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .social-item .social-note {
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    color: var(--paper-dim);
+    opacity: 0.75;
+  }
 
   footer {
     padding: 1.6rem var(--gap) 2.2rem;
